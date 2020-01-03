@@ -38,6 +38,14 @@ export const interpretComponentFromJSON = (
     );
   }
 
+  /**
+   * For modal component, we render The ModalProvider as the parent and also both the
+   * Trigger component and the Modal component itself as its children.
+   *
+   * Notes: For Modals to work correctly, it is important to create the Trigger Object.
+   * The Trigger Object is consists of the same structure as the normal Children and Content object structure.
+   *
+   */
   const trigger = obj['Trigger'];
   const triggerChildrenObject = trigger['Children'];
   const triggerContent = trigger['Content'];
